@@ -1,0 +1,106 @@
+@import "tailwindcss";
+:root {
+  --bg-dark: hsl(0 0 0%);
+  --bg: hsl(0 0 5%);
+  --bg-light: hsl(0 0 10%);
+  --text: hsl(0 0 95%);
+  --text-muted: hsl(0 0 70%);
+  --border: hsl(0 0 30%);
+  --gradient: linear-gradient(0deg, var(--bg) 95%, var(--bg-light));
+}
+
+body {
+  font-family: "Changa", sans-serif;
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+.abstract {
+  color: #777;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 30%;
+  flex-direction: column;
+  flex-basis: 30%;
+  background-color: hsl(0 0 95%);
+  border-radius: 10px;
+  padding: 10px 5px;
+}
+
+.card img {
+  width: 40px;
+}
+
+.card .card-number {
+  color: #0ea3e9;
+  font-weight: bold;
+  margin: 10px auto;
+  font-size: 1.25rem;
+}
+
+.card p {
+  font-weight: bold;
+}
+
+.tips ol li {
+  display: flex;
+  gap: 10px;
+  max-width: 90%;
+  margin: 5px auto;
+  text-align: right;
+}
+
+.tips ol li span {
+  padding: 15px;
+  border-radius: 50%;
+  background-color: hsl(0 0 100%);
+  color: #0ea3e9;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.answers-list button {
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid #0ea3e9;
+  color: #777;
+  margin: 10px auto;
+  padding: 15px 10px;
+}
+
+.correctAnswer {
+  color: rgb(9, 204, 9) !important;
+  border: 3px solid rgb(9, 204, 9) !important;
+  font-weight: bold !important;
+}
+
+.wrongAnswer {
+  color: red !important;
+  border: 3px solid red !important;
+  font-weight: bold !important;
+}
+
+.answers-list li p {
+  margin-right: 10px;
+}
+@media only screen and (min-width: 992px) {
+  .main,
+  .quiz,
+  .result {
+    max-width: 50%;
+  }
+}
